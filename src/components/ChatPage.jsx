@@ -32,7 +32,7 @@ function ChatPage() {
 
 
   function connectWS(){
-    const ws =  new WebSocket('ws://localhost:4015');
+    const ws =  new WebSocket('ws://chatapp-tbqp.onrender.com/');
     setWs(ws)
     ws.addEventListener('message', handleMessage)
     ws.addEventListener('close', () => connectWS())

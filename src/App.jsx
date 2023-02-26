@@ -6,7 +6,7 @@ import ChatPage from './components/ChatPage'
 import axios from 'axios'
 
 function App() {
- axios.defaults.baseURL = 'http://localhost:4015/api';
+ axios.defaults.baseURL = 'https://chatapp-tbqp.onrender.com/api';
  axios.defaults.withCredentials = true
   return <>
 

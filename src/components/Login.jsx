@@ -35,15 +35,7 @@ function Login() {
   let login = async(loginUser) => {
 
     try{
-      const res = await axios.post(`/login`,{
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(loginUser),
-        method:"POST",
-      })
+      const res = await axios.post(`/login`,loginUser)
       setId(res.data.id)
       setUsername(res.data.username)
         if (res.data.msg === "Login Successfully") {

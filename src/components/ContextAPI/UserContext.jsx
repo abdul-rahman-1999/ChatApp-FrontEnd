@@ -10,13 +10,7 @@ export const UserContextProvider = ({children}) => {
     const [id,setId] = useState(null)
 
     useEffect(() => {
-      axios.get('/profile',{
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-      }).then(response => {
+      axios.get('/profile').then(response => {
         setId(response.data.userId);
         setUsername(response.data.username);
       });

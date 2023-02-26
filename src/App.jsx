@@ -7,7 +7,7 @@ import axios from 'axios'
 
 function App() {
  axios.defaults.baseURL = 'https://chatapp-tbqp.onrender.com/api';
- axios.defaults.withCredentials = true
+ axios.defaults.withCredentials = false
   return <>
 
   <Routes>

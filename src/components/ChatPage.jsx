@@ -77,7 +77,13 @@ function ChatPage() {
   useEffect(() =>{
   (async () => {
     if(selectedUserId){
-      const res = await axios.get('/messages/' + selectedUserId)
+      const res = await axios.get('/messages/' + selectedUserId,{
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+      })
       setMessages(res.data)
      }
   })()

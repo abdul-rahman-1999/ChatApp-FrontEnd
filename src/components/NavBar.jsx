@@ -10,7 +10,14 @@ function NavBar({setWs}) {
     let navigate = useNavigate()
     let {username,setUsername,setId} = useContext(UserContext)
     async function logOut() {
-      const res =  await axios.post('/logout').then(() => {
+      const res =  await axios.post('/logout',{
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method:"POST",
+      }).then(() => {
           setWs(null);
           setId(null);
           setUsername(null);

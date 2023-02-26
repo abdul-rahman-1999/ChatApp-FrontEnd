@@ -13,6 +13,7 @@ function App() {
   <Routes>
     <Route path='/chatapp/register' element={<Register/>}/>
     <Route path='/chatapp/signin' element={<Login/>}/>
+    <Route path='/' element={<Login/>}/>
     <Route path='/chatapp/chatpage' element={<ChatPage/>}/>
     </Routes>
 

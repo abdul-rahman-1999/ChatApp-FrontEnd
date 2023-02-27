@@ -35,7 +35,14 @@ function Login() {
   let login = async(loginUser) => {
 
     try{
-      const res = await axios.post(`/api/login`,loginUser)
+      const res = await axios.post({
+        method : "POST",
+        url : "https://chatapp-tbqp.onrender.com/api/login",
+        body : loginUser,
+        headers : {
+          "content-Type" : "application/json"
+        }
+      })
       setId(res.data.id)
       setUsername(res.data.username)
         if (res.data.msg === "Login Successfully") {

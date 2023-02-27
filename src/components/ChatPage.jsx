@@ -14,11 +14,11 @@ function ChatPage() {
 
   let navigate = useNavigate()
   const [ws, setWs] = useState(null)
-  const [onlinePeople,setOnlinePeople] = useState({});
+  const [onlinePeople,setOnlinePeople] = useState([]);
   const [selectedUserId,setSelectedUserId] = useState(null);
   const [newMessageText,setNewMessageText] = useState('');
   const [messages,setMessages] = useState([]);
-  let {id} = useContext(UserContext)
+  let {id,username} = useContext(UserContext)
 
   
   if(id == null){
@@ -100,14 +100,14 @@ function ChatPage() {
     }
   },[messages])
 
-
   return <>
 
   <NavBar setWs={setWs}/>
   
   <Box sx={{display:"flex",width:"100%",justifyContent:"center",alignItems:"center",margin:"0px auto",flexDirection:{xs:"column",sm:"row",md:"row"}}}>
 
-   <Box sx={{width:{xs:"100%",sm:"25%"},backgroundColor:"#fafafa",height:{xs:"450px",sm:"90vh",md:"90vh"},display: "flex",
+    {
+      Object.keys(onlinePeople).length > 1 ? <Box sx={{width:{xs:"100%",sm:"25%"},backgroundColor:"#fafafa",height:{xs:"450px",sm:"90vh",md:"90vh"},display: "flex",
       flexDirection: "column",
       overflow: "hidden",
       overflowY: "scroll",}}>{
@@ -117,7 +117,15 @@ function ChatPage() {
         <Box sx={{borderRadius:"50%",backgroundColor:"lightgreen",width:"10px",height:"10px",marginRight:"15px"}}></Box>
       </Box>
     )) 
-   }</Box>
+   }</Box> : <Box sx={{width:{xs:"100%",sm:"25%"},backgroundColor:"#fafafa",height:{xs:"300px",sm:"90vh",md:"90vh"},display: "flex",
+   flexDirection: "column",
+   overflow: "hidden",
+   overflowY: "scroll",}}>
+    <p style={{textAlign:"center",fontSize:"20px",fontWeight:700,color:"#4dac00"}}>There is No Online Users</p>
+    </Box>
+    }
+
+   {/*  */}
    
    <Box sx={{width:{xs:"100%",sm:"65%"},backgroundColor:"#f4f4f4",height:{xs:"450px",sm:"90vh",md:"90vh"},position:"relative"}}>
     {

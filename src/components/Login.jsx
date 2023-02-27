@@ -56,9 +56,9 @@ function Login() {
 
   <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-around",flexDirection:{xs:"column",sm:"row-reverse"},width:"100%",margin:"0px auto",height:"100vh"}}>
   <Box sx={{width:{xs:"80%",sm:"40%",md:"40%"}}}>
-    <h4 style={{color:"white",fontSize:"20px"}}>Make Cool Friends</h4>
-    <p style={{color:"white",fontSize:"14px",textAlign:"justify",margin:0}}>Friend Finder is a social network template that can be used to connect people. The template offers Landing pages, News Feed, Image/Video Feed, Chat Box, Timeline and lot more.</p><br/>
-    <p style={{color:"white",fontSize:"14px",margin:0}}>Why are you waiting for? Register now.</p>
+    <h4 style={{color:"white",fontWeight:800,fontSize:"20px"}}>Make Cool Friends</h4>
+    <p style={{color:"white",fontWeight:800,fontSize:"14px",textAlign:"justify",margin:0}}>Friend Finder is a social network template that can be used to connect people. The template offers Landing pages, News Feed, Image/Video Feed, Chat Box, Timeline and lot more.</p><br/>
+    <p style={{color:"white",fontWeight:800,fontSize:"14px",margin:0}}>Why are you waiting for? Register now.</p>
   </Box>
 
 <Box sx={{padding:"50px 30px",width:{xs:"70%",sm:"40%",md:"400px"},
@@ -100,7 +100,7 @@ borderRadius: "16px",}}>
         <ToastContainer />
         </Box>
         </form>
-        <h5 style={{margin:"10px",color:"black",textAlign:"center"}}>Dont have an Account <span style={{color:"black",cursor:"pointer"}} onClick={() => navigate('/chatapp/register')}>Click here to Register</span></h5>
+        <h5 style={{margin:"10px",color:"black",textAlign:"center"}}>Dont have an Account <span style={{color:"#27aae1",cursor:"pointer"}} onClick={() => navigate('/chatapp/register')}>Click here to Register</span></h5>
 
 </Box>
 </Box>

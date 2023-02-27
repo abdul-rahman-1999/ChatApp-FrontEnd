@@ -108,7 +108,7 @@ borderRadius: "16px",}}>
         <ToastContainer />
         </Box>
         </form>
-        <h5 style={{margin:"10px",color:"black",textAlign:"center"}}>Already have an Account <span style={{color:"black",cursor:"pointer"}} onClick={() => navigate('/chatapp/signin')}>Click here to Login</span></h5>
+        <h5 style={{margin:"10px",color:"black",textAlign:"center"}}>Already have an Account <span style={{color:"#27aae1",cursor:"pointer"}} onClick={() => navigate('/chatapp/signin')}>Click here to Login</span></h5>
 
 </Box>
 </Box>

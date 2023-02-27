@@ -12,17 +12,21 @@ import NavBar from './NavBar';
 
 function ChatPage() {
 
+  let navigate = useNavigate()
   const [ws, setWs] = useState(null)
   const [onlinePeople,setOnlinePeople] = useState({});
   const [selectedUserId,setSelectedUserId] = useState(null);
   const [newMessageText,setNewMessageText] = useState('');
   const [messages,setMessages] = useState([]);
   let {id} = useContext(UserContext)
-  let navigate = useNavigate()
+
   
-  if(id === null){
+  if(id == null){
     navigate('/chatapp/signin')
   }
+
+
+  
 
   const messaagesBoxRef = useRef()
 

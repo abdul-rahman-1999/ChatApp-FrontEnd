@@ -6,8 +6,8 @@ const UserContext = createContext()
 
 export const UserContextProvider = ({children}) => {
 
-    const [username,setUsername] = useState(null)
-    const [id,setId] = useState(null)
+    const [username,setUsername] = useState("")
+    const [id,setId] = useState("")
 
     useEffect(() => {
       axios.get('/profile').then(response => {

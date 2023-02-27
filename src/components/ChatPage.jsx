@@ -92,7 +92,6 @@ function ChatPage() {
   delete onlinePeopleExclOurUser[id];
 
   const messageWithoutDupes = uniqBy(messages, '_id')
-  console.log(messageWithoutDupes)
 
   useEffect(() => {
     const Box = messaagesBoxRef.current

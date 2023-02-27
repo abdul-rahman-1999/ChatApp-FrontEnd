@@ -38,7 +38,7 @@ function Login() {
       const res = await axios.post({
         method : "POST",
         url : "https://chatapp-tbqp.onrender.com/api/login",
-        body : loginUser,
+        data : JSON.stringify(loginUser),
         headers : {
           "content-Type" : "application/json"
         }

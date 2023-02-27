@@ -35,14 +35,7 @@ function Login() {
   let login = async(loginUser) => {
 
     try{
-      const res = await axios.post({
-        method : "POST",
-        url : "https://chatapp-tbqp.onrender.com/api/login",
-        data : JSON.stringify(loginUser),
-        headers : {
-          "content-Type" : "application/json"
-        }
-      })
+      const res = await axios.post(`/login`,loginUser)
       setId(res.data.id)
       setUsername(res.data.username)
         if (res.data.msg === "Login Successfully") {
@@ -51,7 +44,7 @@ function Login() {
             alert("Invalid Credentials")
           }
      }catch(err){
-      alert("Invalid Credentials")
+      alert(err)
      }
   
   }

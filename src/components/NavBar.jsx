@@ -10,7 +10,7 @@ function NavBar({setWs}) {
     let navigate = useNavigate()
     let {username,setUsername,setId} = useContext(UserContext)
     async function logOut() {
-      const res =  await axios.post('/api/logout').then(() => {
+      const res =  await axios.post('/logout').then(() => {
           setWs(null);
           setId(null);
           setUsername(null);

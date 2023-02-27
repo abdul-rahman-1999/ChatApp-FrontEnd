@@ -77,7 +77,7 @@ function ChatPage() {
   useEffect(() =>{
   (async () => {
     if(selectedUserId){
-      const res = await axios.get('/api/messages/' + selectedUserId)
+      const res = await axios.get('/messages/' + selectedUserId)
       setMessages(res.data)
      }
   })()

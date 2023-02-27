@@ -32,7 +32,7 @@ function ChatPage() {
 
 
   function connectWS(){
-    const ws =  new WebSocket('ws://chatapp-tbqp.onrender.com/');
+    const ws =  new WebSocket('ws:https://chatapp-tbqp.onrender.com/');
     setWs(ws)
     ws.addEventListener('message', handleMessage)
     ws.addEventListener('close', () => connectWS())
@@ -77,7 +77,7 @@ function ChatPage() {
   useEffect(() =>{
   (async () => {
     if(selectedUserId){
-      const res = await axios.get('/messages/' + selectedUserId)
+      const res = await axios.get('/api/messages/' + selectedUserId)
       setMessages(res.data)
      }
   })()

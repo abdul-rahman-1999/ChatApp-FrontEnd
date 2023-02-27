@@ -35,7 +35,7 @@ function Login() {
   let login = async(loginUser) => {
 
     try{
-      const res = await axios.post(`/login`,loginUser)
+      const res = await axios.post(`/api/login`,loginUser)
       setId(res.data.id)
       setUsername(res.data.username)
         if (res.data.msg === "Login Successfully") {

@@ -32,7 +32,7 @@ function Register() {
 let addUser = async(newList) => {
 
   try{
-    const res = await axios.post(`/register`,newList)
+    const res = await axios.post(`/api/register`,newList)
     if(res.data){
       if (res.data.msg === "Registered Successfully") {
                     alert("Account Created Successfully")
